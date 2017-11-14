@@ -1,0 +1,300 @@
+/* 视高 668px */
+
+/*common*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul,li{
+	list-style: none;
+}
+
+html,body,section{
+	height: 100%;
+	overflow: hidden;
+}
+
+body{
+	font: 14px/1.5 Arial;
+}
+
+a{
+	text-decoration: none;
+}
+
+.layout{
+	margin: 0 auto;
+	width: 1100px;
+}
+
+@media(min-width:400px){
+  .layout{
+    width: 300px;
+  }
+}
+
+@media(min-width: 500px){
+  .layout{
+    width: 400px;
+  }
+}
+
+@media(min-width: 600px){
+  .layout{
+    width: 500px;
+  }
+}
+
+@media(min-width: 800px){
+  .layout{
+    width: 600px;
+  }
+}
+
+@media(min-width: 800px){
+  .layout{
+    width: 700px;
+  }
+}
+
+@media(min-width: 900px){
+  .layout{
+    width: 800px;
+  }
+}
+
+@media(min-width: 1000px){
+  .layout{
+    width: 900px;
+  }
+}
+
+@media(min-width: 1100px){
+  .layout{
+    width: 1000px;
+  }
+}
+
+@media(min-width: 1200px){
+  .layout{
+    width: 1100px;
+  }
+}
+
+
+.bg{
+	position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+	background: url(http://cloud.hunger-valley.com/music/public_tuijian_spring.jpg-big) center center no-repeat;
+	background-size: cover;
+	filter: blur(4px);
+	z-index: -1;
+}
+
+.bg:before{
+	content: '';
+	position: absolute;
+	background-color: rgba(0,0,0,0.4);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+main{
+	padding-top: 12vh;
+	height: calc(100% - 24vh);
+}
+
+main::after{
+	content: '';
+	display: block;
+	clear:both;
+}
+
+main .aside{
+	float: left;
+}
+
+main .aside figure{
+  width: 46vh;
+  height: 46vh;
+	background-image: url(http://cloud.hunger-valley.com/music/public_tuijian_spring.jpg-middle);
+	background-size: cover;
+  position-position: center center;
+}
+
+main .aside .actions{
+	display: flex;
+	margin-top: 4vh;
+}
+
+main .actions .iconfont{
+	flex: 1;
+	font-size: 5vh;
+	text-align: center;
+  color: rgba(255,255,255,0.4);
+  transition: color .4s;
+  cursor: pointer;
+}
+
+main .actions .iconfont:hover{
+	color: #fff;
+}
+
+main .detail{
+	margin-left: 56vh;
+	color: #fff;
+}
+
+main .detail .tag{
+	font-size: 2vh;
+	padding: .4em .8em;
+	background: #2e6eec;
+}
+
+main .detail h1{
+	font-size: 6vh;
+	margin-top: 2vh;
+}
+main .detail .icons{
+	display: flex;
+	margin-top: 12vh;
+}
+
+main .detail .icons .iconfont{
+	flex: 1;
+	font-size: 3vh;
+	color: #fff;
+}
+
+main .detail .area-bar{
+	display: flex;
+	margin-top: 10vh;
+	align-items: center;
+}
+
+main .detail .area-bar .bar{
+	position: relative;
+	flex: 1;
+	height: .8vh;
+	background-color: rgba(255, 255, 255, 0.4);
+	border-radius: .2vh;
+  cursor: pointer;
+}
+
+main .detail .area-bar .bar-progress{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 0%;
+	background-color: #fff;
+}
+
+main .detail .area-bar .current-time{
+	float: left;
+	margin-left: 1vh;
+}
+
+main .detail .author{
+  font-size: 3vh;
+  margin-top: 3vh;
+}
+
+main .lyric {
+  font-size: 2vh;
+  margin-top: 2vh;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+
+footer{
+  height: 24vh;
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0px -.25vh .25vh .25vh rgba(255,255,255,0.2);
+}
+
+footer .layout{
+  position: relative;
+}
+
+footer .box{
+  position: relative;
+  overflow: hidden;
+  height: 24vh;
+}
+
+footer .box ul{
+  position: absolute;
+  left: 0;
+}
+
+footer ul:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+footer .box li{
+  float: left;
+  width: 20vh;
+  height: 20vh;
+  margin-top: 1vh;
+  margin: 2vh 2vh 0 2vh;
+  text-align: center;
+  cursor: pointer;
+}
+
+footer .box li:hover{
+  box-shadow: 0 0 .5vh .5vh rgba(255,255,255,0.8);
+}
+
+footer .box .cover{
+  height: 16vh;
+  background: url(http://cloud.hunger-valley.com/music/public_tuijian_spring.jpg-small) center center no-repeat;
+  background-size: cover;
+}
+
+footer .box li h3{
+  font-size: 2vh;
+  margin-top: 1vh;
+  color: rgba(255,255,255,0.6);
+}
+
+footer .iconfont{
+  position: absolute;
+  top: 5vh;
+  font-size: 6vh;
+  cursor: pointer;
+  opacity: 0.6;
+  color: rgba(255,255,255,0.4);
+  transition: all .6s;
+}
+
+footer .iconfont:hover{
+  opacity: 1;
+}
+
+footer .icon-left{
+  left: -8vh;
+}
+
+footer .icon-right{
+  right: -8vh;
+}
+
+footer .active{
+  box-shadow: 0 0 .5vh .5vh rgba(255,255,255,0.8);
+}
+
+.boomText{
+  display: inline-block;
+  opacity: 0;
+}
